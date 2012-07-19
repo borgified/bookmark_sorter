@@ -1,0 +1,24 @@
+=head1 NAME
+
+BOOKMARK SORTER
+
+=head1 DESCRIPTION / NOTES
+sorts all your bookmarks automagically in a logical, concise manner (no not alphabetical)
+
+gotta explore how firefox stores bookmarks
+  bookmarks backups in json format
+maybe we can extract them, one url per line,
+
+flatten it all out
+  Hash::Flatten
+, disregarding any subfolders they might be in already.
+
+then load each url to make sure we arent getting any 404s (skip if they are), then 
+query some database that has information about what "kind" of website we're looking at.
+  http://developer.yahoo.com/search/content/V2/contentAnalysis.html
+
+maybe pull out some keywords or maybe google can give us some analytical info.
+  not nec
+based on these new results, sort bookmarks into appropriate subfolders and put it back into a format ready to be imported back into firefox all nicely sorted.
+
+
